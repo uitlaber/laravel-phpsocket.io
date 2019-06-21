@@ -28,14 +28,14 @@ abstract class AbstractSocket
      *
      * @return void
      */
-    abstract public function call(SocketIO $socketIO): void;
+    abstract public function call(SocketIO $socketIO);
 
     /**
      * Getting socket port.
      *
      * @return int
      */
-    public function getPort(): int
+    public function getPort()
     {
         return $this->port;
     }
@@ -45,7 +45,7 @@ abstract class AbstractSocket
      *
      * @return array
      */
-    public function getOptions(): array
+    public function getOptions()
     {
         return $this->options;
     }
