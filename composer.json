@@ -3,7 +3,7 @@
     "description": "Laravel phpsocket.io",
     "keywords": ["laravel", "socket.io"],
     "require": {
-        "php" : "^7.*",
+        "php": ">=7.0",
         "illuminate/support": "5.5.*",
         "workerman/phpsocket.io": "^1.1"
     },
