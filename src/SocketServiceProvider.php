@@ -25,7 +25,7 @@ class SocketServiceProvider extends ServiceProvider
      *
      * @return bool
      */
-    public function boot(): bool
+    public function boot()
     {
         foreach ($this->sockets as $handler) {
             // @codeCoverageIgnoreStart
@@ -51,7 +51,7 @@ class SocketServiceProvider extends ServiceProvider
      *
      * @return AbstractSocket
      */
-    protected function makeSocketHandler($handler): AbstractSocket
+    protected function makeSocketHandler($handler)
     {
         return $this->app->make($handler);
     }
@@ -66,7 +66,7 @@ class SocketServiceProvider extends ServiceProvider
      *
      * @return SocketIO
      */
-    protected function makeSocket(int $port, array $options = []): SocketIO
+    protected function makeSocket(int $port, array $options = [])
     {
         return $this->app->make(SocketIO::class, [
             'port' => $port,
